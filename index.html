@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan Kustina &amp; Irawan</title>
+  <script src="/_sdk/data_sdk.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        .great-vibes {
+            font-family: 'Great+Vibes', cursive;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fallLeaf {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(-50px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotateIn {
+            0% {
+                opacity: 0;
+                transform: rotate(-200deg) scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(0) scale(1);
+            }
+        }
+
+        @keyframes slowZoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .bg-zoom {
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+
+        .animate-bounce-in {
+            opacity: 0;
+            animation: bounceIn 0.8s ease-out forwards;
+            animation-play-state: paused;
+        }
+
+        .animate-slide-left {
+            opacity: 0;
+            animation: slideInLeft 0.8s ease-out forwards;
+            animation-play-state: paused;
+        }
+
+        .animate-slide-right {
+            opacity: 0;
+            animation: slideInRight 0.8s ease-out forwards;
+            animation-play-state: paused;
+        }
+
+        .animate-fade-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-play-state: paused;
+        }
+
+        .animate-zoom {
+            opacity: 0;
+            animation: zoomIn 0.6s ease-out forwards;
+            animation-play-state: paused;
+        }
+
+        .animate-rotate {
+            opacity: 0;
+            animation: rotateIn 0.8s ease-out forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes cornerSlideIn {
+            0% {
+                opacity: 0;
+                transform: translate(var(--start-x), var(--start-y)) scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+        }
+
+        .corner-decoration {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .corner-top-left {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: cornerSlideIn 1s ease-out forwards;
+            animation-play-state: paused;
+            --start-x: -100px;
+            --start-y: -100px;
+        }
+
+        .corner-top-right {
+            top: 0;
+            right: 0;
+            opacity: 0;
+            animation: cornerSlideIn 1s ease-out forwards;
+            animation-play-state: paused;
+            --start-x: 100px;
+            --start-y: -100px;
+        }
+
+        .corner-bottom-left {
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            animation: cornerSlideIn 1s ease-out forwards;
+            animation-play-state: paused;
+            --start-x: -100px;
+            --start-y: 100px;
+        }
+
+        .corner-bottom-right {
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            animation: cornerSlideIn 1s ease-out forwards;
+            animation-play-state: paused;
+            --start-x: 100px;
+            --start-y: 100px;
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .leaf {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            opacity: 0.7;
+            animation: fallLeaf linear infinite;
+        }
+
+        .leaf:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+        .leaf:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; }
+        .leaf:nth-child(3) { left: 50%; animation-duration: 9s; animation-delay: 4s; }
+        .leaf:nth-child(4) { left: 70%; animation-duration: 11s; animation-delay: 1s; }
+        .leaf:nth-child(5) { left: 90%; animation-duration: 7s; animation-delay: 3s; }
+
+        .branch {
+            position: absolute;
+            animation: sway 3s ease-in-out infinite;
+        }
+
+        .branch-left {
+            left: 0;
+            top: 20%;
+            transform-origin: top left;
+        }
+
+        .branch-right {
+            right: 0;
+            top: 20%;
+            transform-origin: top right;
+        }
+
+        .wayang {
+            position: fixed;
+            z-index: 10;
+            animation: sway 4s ease-in-out infinite;
+        }
+
+        .wayang-left {
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            transform-origin: bottom center;
+        }
+
+        .wayang-right {
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            transform-origin: bottom center;
+        }
+
+        .nav-button {
+            position: fixed;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .nav-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .music-button {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .music-button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .spinning {
+            animation: spin 2s linear infinite;
+        }
+
+        .section {
+            min-height: 100%;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .countdown-box {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            min-width: 70px;
+        }
+
+        .rsvp-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .bank-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            padding: 20px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 2000;
+            display: none;
+        }
+
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+ </head>
+ <body><!-- Music Button -->
+  <div class="music-button" id="musicBtn">
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13" /> <circle cx="6" cy="18" r="3"></circle> <circle cx="18" cy="16" r="3"></circle>
+   </svg>
+  </div><!-- Navigation Buttons -->
+  <div class="nav-button" style="bottom: 280px;" onclick="scrollToSection('section1')">
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+   </svg>
+  </div>
+  <div class="nav-button" style="bottom: 220px;" onclick="scrollToSection('section2')">
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2"><circle cx="12" cy="12" r="10"></circle> <line x1="12" y1="16" x2="12" y2="12"></line> <line x1="12" y1="8" x2="12.01" y2="8"></line>
+   </svg>
+  </div>
+  <div class="nav-button" style="bottom: 160px;" onclick="scrollToSection('section3')">
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z" /> <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+   </svg>
+  </div>
+  <div class="nav-button" style="bottom: 100px;" onclick="scrollToSection('section4')">
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect> <line x1="2" y1="10" x2="22" y2="10"></line>
+   </svg>
+  </div>
+  <div class="nav-button" style="bottom: 40px;" onclick="scrollToSection('section5')">
+   <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3"></circle>
+   </svg>
+  </div><!-- Cover Section -->
+  <section id="coverSection" class="section flex flex-col items-center justify-center text-center" style="position: relative; overflow: hidden;">
+   <div class="w-full h-full absolute top-0 left-0">
+    <video autoplay loop muted playsinline class="w-full h-full object-cover" style="opacity: 1;"><source src="https://journal-aharesearch.com/wedding_asset/Cover.mp4" type="video/mp4">
+    </video>
+   </div>
+   <div class="relative z-10 max-w-2xl mx-auto px-4" style="margin-top: auto; margin-bottom: 60px;">
+    <div class="text-center mb-6">
+     <p class="text-white text-lg mb-3" style="font-family: 'Poppins', sans-serif; font-weight: 400; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Kepada Yth:</p>
+     <h3 id="guestName" class="text-white text-2xl font-bold mb-2" style="font-family: 'Great Vibes', cursive; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Bapak/Ibu/Saudara/i</h3>
+    </div><button onclick="openInvitation()" class="inline-flex items-center gap-3 px-10 py-5 bg-white rounded-full font-bold text-xl shadow-2xl hover:shadow-3xl transition-all hover:scale-105" style="color: #667eea;">
+     <svg width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /> <polyline points="22,6 12,13 2,6"></polyline>
+     </svg> Buka Undangan </button>
+   </div>
+  </section><!-- Main Content Container -->
+  <div id="mainContent" style="display: none;"><!-- Section 1: Hero -->
+   <section id="section1" class="section flex flex-col items-center justify-center text-center" style="position: relative; overflow: hidden; min-height: 100vh;"><!-- Background video -->
+    <div class="absolute inset-0 w-full h-full" style="z-index: 0;">
+     <video autoplay loop muted playsinline class="w-full h-full object-cover"><source src="https://journal-aharesearch.com/wedding_asset/bgcoveranimated.mp4" type="video/mp4">
+     </video>
+    </div><!-- Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center" style="padding: 20px;">
+     <h2 class="text-5xl mb-4 animate-bounce-in" style="font-family: 'Great Vibes', cursive; color: #667eea; font-weight: 700; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">The Wedding Of</h2><img src="https://png.pngtree.com/png-clipart/20230124/original/pngtree-indonesia-java-or-java-wedding-vector-white-dress-design-cartoon-character-png-image_8928851.png" alt="Mempelai" class="floating w-48 h-48 object-contain mb-6 animate-zoom" style="animation-delay: 0.2s; filter: drop-shadow(0 4px 8px rgba(255,255,255,0.6));" onerror="this.src=''; this.alt='Gambar tidak tersedia'; this.style.display='none';">
+     <h1 class="text-5xl mb-2 animate-slide-left" style="font-family: 'Great Vibes', cursive; color: #667eea; animation-delay: 0.4s; text-shadow: 2px 2px 4px rgba(255,255,255,0.8);" id="namaMempelai">Kustina &amp; Irawan</h1>
+     <p class="text-gray-800 mb-8 animate-fade-up font-semibold" style="animation-delay: 0.6s; text-shadow: 1px 1px 2px rgba(255,255,255,0.8);" id="tanggalAcara">Sabtu, 6 Desember 2025</p>
+     <div class="flex gap-4 mb-6 animate-fade-up" style="animation-delay: 0.8s;">
+      <div class="countdown-box">
+       <div class="text-3xl font-bold" style="color: #667eea;" id="days">
+        0
+       </div>
+       <div class="text-xs text-gray-600">
+        Hari
+       </div>
+      </div>
+      <div class="countdown-box">
+       <div class="text-3xl font-bold" style="color: #667eea;" id="hours">
+        0
+       </div>
+       <div class="text-xs text-gray-600">
+        Jam
+       </div>
+      </div>
+      <div class="countdown-box">
+       <div class="text-3xl font-bold" style="color: #667eea;" id="minutes">
+        0
+       </div>
+       <div class="text-xs text-gray-600">
+        Menit
+       </div>
+      </div>
+      <div class="countdown-box">
+       <div class="text-3xl font-bold" style="color: #667eea;" id="seconds">
+        0
+       </div>
+       <div class="text-xs text-gray-600">
+        Detik
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 2: Info -->
+   <section id="section2" class="section" style="position: relative; overflow: hidden;"><!-- Background video -->
+    <div class="absolute inset-0 w-full h-full" style="z-index: 0;">
+     <video autoplay loop muted playsinline class="w-full h-full object-cover"><source src="https://journal-aharesearch.com/wedding_asset/bgall-animated.mp4" type="video/mp4">
+     </video>
+    </div>
+    <div class="max-w-2xl mx-auto relative z-10">
+     <h2 class="text-3xl font-bold text-center mb-8 animate-bounce-in" style="color: #667eea; font-family: 'Great Vibes', cursive;">Informasi Acara</h2>
+     <p class="text-center text-gray-700 mb-8 px-4 animate-fade-up" style="animation-delay: 0.2s;">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami</p>
+     <div class="grid md:grid-cols-2 gap-6 mb-8"><!-- Mempelai Wanita -->
+      <div class="text-center p-6 bg-white rounded-2xl shadow-lg animate-slide-left" style="animation-delay: 0.4s;"><img src="https://png.pngtree.com/png-clipart/20241230/original/pngtree-bride-wearing-javanese-wedding-costume-png-image_18254539.png" alt="Mempelai Wanita" class="w-32 h-32 object-contain mx-auto mb-4" onerror="this.src=''; this.alt='Gambar tidak tersedia'; this.style.display='none';">
+       <h3 class="text-2xl font-bold mb-2" style="color: #667eea;" id="namaLengkapWanita">Kustina Apriliyah</h3>
+       <p class="text-sm text-gray-600" id="asalWanita">Sumbergedang - Pandaan</p>
+      </div><!-- Mempelai Pria -->
+      <div class="text-center p-6 bg-white rounded-2xl shadow-lg animate-slide-right" style="animation-delay: 0.4s;"><img src="https://journal-aharesearch.com/wedding_asset/priakarakter.png" alt="Mempelai Pria" class="w-32 h-32 object-contain mx-auto mb-4" onerror="this.src=''; this.alt='Gambar tidak tersedia'; this.style.display='none';">
+       <h3 class="text-2xl font-bold mb-2" style="color: #667eea;" id="namaLengkapPria">Dwi Irawan</h3>
+       <p class="text-sm text-gray-600" id="asalPria">Randupitu - Gempol</p>
+      </div>
+     </div><!-- Detail Acara -->
+     <div class="bg-white rounded-2xl shadow-lg p-6 space-y-4 animate-fade-up" style="animation-delay: 0.6s;"><!-- Akad Nikah Section -->
+      <div class="text-center mb-6 p-6 rounded-2xl" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white;">
+       <div class="flex items-center justify-center mb-3">
+        <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+       </div>
+       <h3 class="text-lg font-semibold mb-2 opacity-90">Akad Nikah</h3>
+       <p class="text-2xl font-bold mb-1" style="font-family: 'Great Vibes', cursive;">Jumat, 5 Desember 2025</p>
+       <p class="text-lg opacity-90">Pukul 08.00 WIB</p>
+      </div><!-- Featured Date Section -->
+      <div class="text-center mb-6 p-6 rounded-2xl" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+       <div class="flex items-center justify-center mb-3">
+        <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect> <line x1="16" y1="2" x2="16" y2="6"></line> <line x1="8" y1="2" x2="8" y2="6"></line> <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+       </div>
+       <h3 class="text-lg font-semibold mb-2 opacity-90">Resepsi Pernikahan</h3>
+       <p class="text-3xl font-bold" style="font-family: 'Great Vibes', cursive;" id="tanggalResepsi">Sabtu, 6 Desember 2025</p>
+      </div>
+      <div class="flex items-start gap-4" style="display: none;">
+       <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: #667eea;">
+        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect> <line x1="16" y1="2" x2="16" y2="6"></line> <line x1="8" y1="2" x2="8" y2="6"></line> <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+       </div>
+       <div>
+        <h4 class="font-semibold text-gray-800">Tanggal Resepsi</h4>
+        <p class="text-gray-600">Sabtu, 6 Desember 2025</p>
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3" style="background: #667eea;">
+        <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"></circle> <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+       </div>
+       <h4 class="font-semibold text-gray-800 mb-2">Waktu</h4>
+       <p class="text-gray-600" id="jamResepsi">Jam Bebas</p>
+      </div>
+      <div class="text-center">
+       <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3" style="background: #667eea;">
+        <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+       </div>
+       <h4 class="font-semibold text-gray-800 mb-2">Lokasi</h4>
+       <p class="text-gray-600" id="lokasiResepsi">Dusun Winong RT 002 RW 017 Desa Sumbergedang Kecamatan Pandaan</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 3: Doa -->
+   <section id="section3" class="section flex flex-col items-center justify-center text-center" style="position: relative; overflow: hidden;"><!-- Background video -->
+    <div class="absolute inset-0 w-full h-full" style="z-index: 0;">
+     <video autoplay loop muted playsinline class="w-full h-full object-cover"><source src="https://journal-aharesearch.com/wedding_asset/bgall-animated.mp4" type="video/mp4">
+     </video>
+    </div>
+    <div class="max-w-2xl mx-auto px-4 relative z-10">
+     <div class="text-6xl mb-6 animate-rotate">
+      🤲
+     </div>
+     <h2 class="text-3xl font-bold mb-6 animate-bounce-in" style="color: #667eea; font-family: 'Great Vibes', cursive; animation-delay: 0.2s;">Doa &amp; Ucapan</h2>
+     <p class="text-gray-700 leading-relaxed mb-6 animate-fade-up" style="animation-delay: 0.4s;" id="ucapanDoa">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+     <p class="text-sm text-gray-600 mb-8 animate-fade-up" style="animation-delay: 0.6s;">(QS. Ar-Rum: 21)</p>
+     <p class="text-gray-700 font-semibold animate-fade-up" style="animation-delay: 0.8s;">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.</p>
+     <p class="text-gray-700 mt-6 animate-fade-up" style="animation-delay: 1s;" id="ucapanTerimakasih">Terima kasih atas doa dan kehadiran Anda</p>
+    </div>
+   </section><!-- Section 4: RSVP & Rekening -->
+   <section id="section4" class="section" style="position: relative; overflow: hidden;"><!-- Background video -->
+    <div class="absolute inset-0 w-full h-full" style="z-index: 0;">
+     <video autoplay loop muted playsinline class="w-full h-full object-cover"><source src="https://journal-aharesearch.com/wedding_asset/bgall-animated.mp4" type="video/mp4">
+     </video>
+    </div>
+    <div class="max-w-2xl mx-auto relative z-10">
+     <h2 class="text-3xl font-bold text-center mb-8 animate-bounce-in" style="color: #667eea; font-family: 'Great Vibes', cursive;">Konfirmasi Kehadiran</h2><!-- Form RSVP -->
+     <div class="bg-white rounded-2xl shadow-lg p-6 mb-8 animate-fade-up" style="animation-delay: 0.2s;">
+      <form id="rsvpForm" class="space-y-4">
+       <div><label for="namaInput" class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap</label> <input type="text" id="namaInput" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+       </div>
+       <div><label for="kehadiranInput" class="block text-sm font-semibold text-gray-700 mb-2">Konfirmasi Kehadiran</label> <select id="kehadiranInput" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"> <option value="">Pilih...</option> <option value="Hadir">Hadir</option> <option value="Tidak Hadir">Tidak Hadir</option> <option value="Ragu-ragu">Ragu-ragu</option> </select>
+       </div>
+       <div><label for="pesanInput" class="block text-sm font-semibold text-gray-700 mb-2">Pesan &amp; Doa (Opsional)</label> <textarea id="pesanInput" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+       </div><button type="submit" id="submitBtn" class="w-full py-3 rounded-lg font-semibold text-white transition-all" style="background: #667eea;"> Kirim Konfirmasi </button>
+      </form>
+     </div><!-- Statistik -->
+     <div class="grid grid-cols-3 gap-4 mb-8 animate-zoom" style="animation-delay: 0.4s;">
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+       <div class="text-3xl font-bold" style="color: #10b981;" id="totalHadir">
+        0
+       </div>
+       <div class="text-sm text-gray-600">
+        Hadir
+       </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+       <div class="text-3xl font-bold" style="color: #f59e0b;" id="totalRagu">
+        0
+       </div>
+       <div class="text-sm text-gray-600">
+        Ragu-ragu
+       </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+       <div class="text-3xl font-bold" style="color: #ef4444;" id="totalTidakHadir">
+        0
+       </div>
+       <div class="text-sm text-gray-600">
+        Tidak Hadir
+       </div>
+      </div>
+     </div><!-- Daftar RSVP -->
+     <div id="rsvpList" class="space-y-3"></div><!-- Rekening -->
+     <div class="mt-12">
+      <h3 class="text-2xl font-bold text-center mb-6 animate-bounce-in" style="color: #667eea; font-family: 'Great Vibes', cursive; animation-delay: 0.6s;">Amplop Digital</h3>
+      <p class="text-center text-gray-600 mb-6 animate-fade-up" style="animation-delay: 0.8s;">Bagi yang ingin memberikan hadiah, dapat melalui:</p>
+      <div class="bank-card animate-slide-left" style="animation-delay: 1s;">
+       <div class="flex items-center justify-between mb-3">
+        <div>
+         <div class="text-sm opacity-90">
+          Bank BNI
+         </div>
+         <div class="text-2xl font-bold">
+          1818938791
+         </div>
+         <div class="text-sm opacity-90">
+          a.n. Dwi Irawan
+         </div>
+        </div>
+        <svg width="40" height="40" viewbox="0 0 24 24" fill="white"><rect x="2" y="5" width="20" height="14" rx="2"></rect> <line x1="2" y1="10" x2="22" y2="10" stroke="#667eea" stroke-width="2"></line>
+        </svg>
+       </div><button onclick="copyToClipboard('1818938791', 'BNI')" class="w-full py-2 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-all"> 📋 Salin Nomor Rekening </button>
+      </div>
+      <div class="bank-card animate-slide-right" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); animation-delay: 1.2s;">
+       <div class="flex items-center justify-between mb-3">
+        <div>
+         <div class="text-sm opacity-90">
+          Bank BRI
+         </div>
+         <div class="text-2xl font-bold">
+          6478 0101 8543 532
+         </div>
+         <div class="text-sm opacity-90">
+          a.n. Kustina Apriliyah
+         </div>
+        </div>
+        <svg width="40" height="40" viewbox="0 0 24 24" fill="white"><rect x="2" y="5" width="20" height="14" rx="2"></rect> <line x1="2" y1="10" x2="22" y2="10" stroke="#f5576c" stroke-width="2"></line>
+        </svg>
+       </div><button onclick="copyToClipboard('6478010185435532', 'BRI')" class="w-full py-2 bg-white text-pink-600 rounded-lg font-semibold hover:bg-gray-100 transition-all"> 📋 Salin Nomor Rekening </button>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 5: Maps -->
+   <section id="section5" class="section flex flex-col items-center justify-center" style="position: relative; overflow: hidden;"><!-- Background video -->
+    <div class="absolute inset-0 w-full h-full" style="z-index: 0;">
+     <video autoplay loop muted playsinline class="w-full h-full object-cover"><source src="https://journal-aharesearch.com/wedding_asset/bgall-animated.mp4" type="video/mp4">
+     </video>
+    </div>
+    <div class="max-w-2xl mx-auto text-center px-4 relative z-10">
+     <h2 class="text-3xl font-bold mb-8 animate-bounce-in" style="color: #667eea; font-family: 'Great Vibes', cursive;">Lokasi Acara</h2>
+     <div class="mb-8 animate-zoom"><img src="https://journal-aharesearch.com/wedding_asset/Maps.gif" alt="Lokasi Acara" class="mx-auto rounded-2xl shadow-lg" style="max-width: 400px; width: 100%;" onerror="this.src=''; this.alt='Gambar tidak tersedia'; this.style.display='none';">
+     </div>
+     <p class="text-gray-700 mb-6 animate-fade-up" style="animation-delay: 0.2s;">Dusun Winong RT 002 RW 017<br>
+       Desa Sumbergedang, Kecamatan Pandaan</p><a href="https://maps.app.goo.gl/XLPBPHUmCRzSnvjF7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-white transition-all hover:shadow-lg animate-bounce-in" style="background: #667eea; animation-delay: 0.4s;">
+      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> <circle cx="12" cy="10" r="3"></circle>
+      </svg> Buka di Google Maps </a> <!-- Creator Info -->
+     <div class="mt-12 pt-8 border-t border-gray-300 text-center animate-fade-up" style="animation-delay: 0.6s;"><img src="https://journal-aharesearch.com/wedding_asset/Movin.png" alt="Movin Printing Logo" class="w-16 h-16 object-contain mx-auto mb-3" onerror="this.style.display='none';">
+      <p class="text-sm text-gray-600 mb-3" style="font-family: 'Poppins', sans-serif;">Made with <span style="color: #ef4444;">❤️</span> by Movin Printing</p>
+      <div class="flex items-center justify-center gap-4"><a href="https://wa.me/6285755819007" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 transition-all">
+        <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg></a> <a href="https://www.instagram.com/moo_viin/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 transition-all">
+        <svg width="20" height="20" viewbox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div><!-- End Main Content Container --> <!-- Toast Notification -->
+  <div id="toast" class="toast"></div><!-- Audio -->
+  <audio id="bgMusic" loop><source src="https://journal-aharesearch.com/wedding_asset/kasihputih.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+        const defaultConfig = {
+            nama_mempelai_wanita: "Kustina",
+            nama_mempelai_pria: "Irawan",
+            nama_lengkap_wanita: "Kustina Apriliyah",
+            asal_wanita: "Winong - Sumbergedang - Pandaan",
+            nama_lengkap_pria: "Dwi Irawan",
+            asal_pria: "Randupitu - Gempol",
+            tanggal_acara: "Sabtu, 6 Desember 2025",
+            jam_acara: "Jam Bebas",
+            lokasi_acara: "Dusun Winong RT 002 RW 017 Desa Sumbergedang Kecamatan Pandaan",
+            ucapan_terima_kasih: "Terima kasih atas doa dan kehadiran Anda",
+            background_color: "#ffffff",
+            primary_color: "#667eea",
+            text_color: "#374151",
+            accent_color: "#10b981",
+            card_color: "#f8f9fa",
+            font_family: "Poppins",
+            font_size: 16
+        };
+
+        let allRsvpData = [];
+        let isPlaying = false;
+
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('2025-12-07T06:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Scroll to section
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Copy to clipboard
+        function copyToClipboard(text, bank) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`Nomor rekening ${bank} berhasil disalin!`);
+            });
+        }
+
+        // Show toast
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        // Music control
+        const musicBtn = document.getElementById('musicBtn');
+        const bgMusic = document.getElementById('bgMusic');
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>';
+                musicBtn.classList.remove('spinning');
+            } else {
+                bgMusic.play();
+                musicBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+                musicBtn.classList.add('spinning');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Get guest name from URL
+        function getGuestNameFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestParam = urlParams.get('to') || urlParams.get('nama') || urlParams.get('guest');
+            if (guestParam) {
+                // Decode and format the name
+                const decodedName = decodeURIComponent(guestParam);
+                document.getElementById('guestName').textContent = decodedName;
+            }
+        }
+
+        // Auto play music on load
+        window.addEventListener('load', () => {
+            // Set guest name from URL
+            getGuestNameFromUrl();
+            
+            // Try to autoplay
+            const playPromise = bgMusic.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isPlaying = true;
+                    musicBtn.classList.add('spinning');
+                    musicBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+                }).catch(() => {
+                    // Auto-play prevented by browser
+                    isPlaying = false;
+                });
+            }
+        });
+
+        // Function to open invitation
+        function openInvitation() {
+            // Hide cover section
+            document.getElementById('coverSection').style.display = 'none';
+            // Show main content
+            document.getElementById('mainContent').style.display = 'block';
+            
+            // Start music when opening invitation
+            if (!isPlaying) {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    musicBtn.classList.add('spinning');
+                    musicBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+                }).catch(() => {
+                    // Handle error
+                });
+            }
+            
+            // Scroll to section 1
+            setTimeout(() => {
+                document.getElementById('section1').scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+
+        // Data SDK Handler
+        const dataHandler = {
+            onDataChanged(data) {
+                allRsvpData = data;
+                renderRsvpList();
+                updateStats();
+            }
+        };
+
+        function renderRsvpList() {
+            const container = document.getElementById('rsvpList');
+            container.innerHTML = '';
+
+            allRsvpData.slice().reverse().forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'rsvp-card';
+                let statusColor = 'text-gray-600';
+                if (item.kehadiran === 'Hadir') statusColor = 'text-green-600';
+                else if (item.kehadiran === 'Tidak Hadir') statusColor = 'text-red-600';
+                else if (item.kehadiran === 'Ragu-ragu') statusColor = 'text-yellow-600';
+                
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-gray-800">${item.nama}</h4>
+                            <p class="text-sm ${statusColor} font-semibold">
+                                ${item.kehadiran}
+                            </p>
+                            ${item.pesan ? `<p class="text-sm text-gray-600 mt-2">${item.pesan}</p>` : ''}
+                        </div>
+                        <button onclick="deleteRsvp('${item.__backendId}')" 
+                                class="text-red-500 hover:text-red-700 ml-4">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function updateStats() {
+            const hadir = allRsvpData.filter(item => item.kehadiran === 'Hadir').length;
+            const ragu = allRsvpData.filter(item => item.kehadiran === 'Ragu-ragu').length;
+            const tidakHadir = allRsvpData.filter(item => item.kehadiran === 'Tidak Hadir').length;
+            
+            document.getElementById('totalHadir').textContent = hadir;
+            document.getElementById('totalRagu').textContent = ragu;
+            document.getElementById('totalTidakHadir').textContent = tidakHadir;
+        }
+
+        async function deleteRsvp(backendId) {
+            const record = allRsvpData.find(item => item.__backendId === backendId);
+            if (!record) return;
+
+            const result = await window.dataSdk.delete(record);
+            if (result.isOk) {
+                showToast('Data berhasil dihapus');
+            } else {
+                showToast('Gagal menghapus data');
+            }
+        }
+
+        // Form submission
+        document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const nama = document.getElementById('namaInput').value;
+            const kehadiran = document.getElementById('kehadiranInput').value;
+            const pesan = document.getElementById('pesanInput').value;
+
+            if (allRsvpData.length >= 999) {
+                showToast('Batas maksimum 999 konfirmasi telah tercapai');
+                return;
+            }
+
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = 'Mengirim...';
+
+            const result = await window.dataSdk.create({
+                nama: nama,
+                kehadiran: kehadiran,
+                pesan: pesan,
+                timestamp: new Date().toISOString()
+            });
+
+            submitBtn.classList.remove('loading');
+            submitBtn.textContent = 'Kirim Konfirmasi';
+
+            if (result.isOk) {
+                showToast('Konfirmasi berhasil dikirim!');
+                document.getElementById('rsvpForm').reset();
+            } else {
+                showToast('Gagal mengirim konfirmasi. Silakan coba lagi.');
+            }
+        });
+
+        // Element SDK
+        async function onConfigChange(config) {
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+            const baseFontStack = 'Arial, sans-serif';
+
+            document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+            document.body.style.fontSize = `${baseSize}px`;
+
+            document.getElementById('namaMempelai').textContent = 
+                `${config.nama_mempelai_wanita || defaultConfig.nama_mempelai_wanita} & ${config.nama_mempelai_pria || defaultConfig.nama_mempelai_pria}`;
+            document.getElementById('tanggalAcara').textContent = config.tanggal_acara || defaultConfig.tanggal_acara;
+            document.getElementById('namaLengkapWanita').textContent = config.nama_lengkap_wanita || defaultConfig.nama_lengkap_wanita;
+            document.getElementById('asalWanita').textContent = config.asal_wanita || defaultConfig.asal_wanita;
+            document.getElementById('namaLengkapPria').textContent = config.nama_lengkap_pria || defaultConfig.nama_lengkap_pria;
+            document.getElementById('asalPria').textContent = config.asal_pria || defaultConfig.asal_pria;
+            document.getElementById('tanggalResepsi').textContent = config.tanggal_acara || defaultConfig.tanggal_acara;
+            document.getElementById('jamResepsi').textContent = config.jam_acara || defaultConfig.jam_acara;
+            document.getElementById('lokasiResepsi').textContent = config.lokasi_acara || defaultConfig.lokasi_acara;
+            document.getElementById('ucapanTerimakasih').textContent = config.ucapan_terima_kasih || defaultConfig.ucapan_terima_kasih;
+
+            const primaryColor = config.primary_color || defaultConfig.primary_color;
+            const elements = document.querySelectorAll('[style*="color: #667eea"], [style*="background: #667eea"]');
+            elements.forEach(el => {
+                if (el.style.color === 'rgb(102, 126, 234)' || el.style.color === '#667eea') {
+                    el.style.color = primaryColor;
+                }
+                if (el.style.background === 'rgb(102, 126, 234)' || el.style.background === '#667eea') {
+                    el.style.background = primaryColor;
+                }
+            });
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities: (config) => ({
+                    recolorables: [
+                        {
+                            get: () => config.primary_color || defaultConfig.primary_color,
+                            set: (value) => {
+                                config.primary_color = value;
+                                window.elementSdk.setConfig({ primary_color: value });
+                            }
+                        }
+                    ],
+                    borderables: [],
+                    fontEditable: {
+                        get: () => config.font_family || defaultConfig.font_family,
+                        set: (value) => {
+                            config.font_family = value;
+                            window.elementSdk.setConfig({ font_family: value });
+                        }
+                    },
+                    fontSizeable: {
+                        get: () => config.font_size || defaultConfig.font_size,
+                        set: (value) => {
+                            config.font_size = value;
+                            window.elementSdk.setConfig({ font_size: value });
+                        }
+                    }
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["nama_mempelai_wanita", config.nama_mempelai_wanita || defaultConfig.nama_mempelai_wanita],
+                    ["nama_mempelai_pria", config.nama_mempelai_pria || defaultConfig.nama_mempelai_pria],
+                    ["nama_lengkap_wanita", config.nama_lengkap_wanita || defaultConfig.nama_lengkap_wanita],
+                    ["asal_wanita", config.asal_wanita || defaultConfig.asal_wanita],
+                    ["nama_lengkap_pria", config.nama_lengkap_pria || defaultConfig.nama_lengkap_pria],
+                    ["asal_pria", config.asal_pria || defaultConfig.asal_pria],
+                    ["tanggal_acara", config.tanggal_acara || defaultConfig.tanggal_acara],
+                    ["jam_acara", config.jam_acara || defaultConfig.jam_acara],
+                    ["lokasi_acara", config.lokasi_acara || defaultConfig.lokasi_acara],
+                    ["ucapan_terima_kasih", config.ucapan_terima_kasih || defaultConfig.ucapan_terima_kasih]
+                ])
+            });
+        }
+
+        // Initialize Data SDK
+        (async () => {
+            if (window.dataSdk) {
+                const result = await window.dataSdk.init(dataHandler);
+                if (!result.isOk) {
+                    console.error("Failed to initialize data SDK");
+                }
+            }
+        })();
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Trigger animations for all animated elements in the section
+                    const animatedElements = entry.target.querySelectorAll('[class*="animate-"]');
+                    animatedElements.forEach(el => {
+                        el.style.animationPlayState = 'running';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99cdd384251ddf7c',t:'MTc2Mjg2NDQ5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
